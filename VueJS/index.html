@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./vue.js"></script>
+    <style>
+        .verde {
+            color: green;
+        }
+        .negrito {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        {{mensagem}}<br>
-        Valor Total: {{valorTotal}}<br>
-        Logado: {{logado}}<br>
-        Hobbie: {{hobbies[3]}}<br>
-        Perfil: {{perfil.site}}, {{perfil.cursos[0].nome}}<br>
-        Somar: {{somar()}}<br>
-        Subtrair: {{subtrair()}}<br>
-        Multiplicar: {{ multiplicar() }}<br>
-        Dividir: {{dividir()}}
+        <!--Deixar só os dois pontos é forma mais elegante e enxuta de digitar o v-bind-->
+        <a href="www.google.com.br" :href="site" target="_blank">Site</a> <!--Se eu coloco dois href, ele vai pegar o da direita, isso é sobreposição de atributo-->
+        <p v-bind:class="cor" class="negrito">Entendendo a diretiva v-bind</p> <!--Se eu coloco duas classes, o vue tem a inteligencia de aplicar as duas-->
+        <input type="text" v-bind:placeholder="instrucaoPlaceholder">
+        <input type="checkbox" v-bind:checked="check">
     </div>
     <script>
         /**
@@ -28,51 +32,13 @@
         const vm = new Vue({
             el: "#app",
             data: {
-                n1: 4,
-                n2: 2,
-                mensagem: 'Primeiro template controlado pelo Vue',
-                valorTotal: 150.47,
-                logado: false,
-                hobbies: [
-                    'Dormir',
-                    'Colecionar videogames antigos',
-                    'Correr',
-                    'Trilhas'
-                ],
-                perfil: {
-                    nome: 'Jorge Sant Ana',
-                    site: 'jorgesantana.net.br',
-                    idade: 32,
-                    cursos: [
-                        {
-                            nome: 'Laravel',
-                            cargaHoraria: '50 horas'
-                        },
-                        {
-                            nome: 'Bancos de dados relacionais',
-                            cargaHoraria: '40 horas'
-                        }
-                    ]
-                }
+                site: 'http://jorgesantana.net.br',
+                cor: 'verde',
+                instrucaoPlaceholder: 'Aqui fica o placeholder',
+                check: true
             },
             methods: {
-                //função convencional
-                somar: function somar() {
-                    return this.n1 + this.n2 // this referencia o objeto Vue
-                },
-                //anonima
-                subtrair: function () {
-                    return this.n1 - this.n2
-                },
-                // arrow
-                // na arrow function o this referencia o Window. Objeto global do navegador
-                multiplicar: () => {
-                    return this.n1 * this.n2 
-                },
-                // mais enxuta
-                dividir() {
-                    return this.n1 / this.n2
-                } 
+                
             }
         }) 
 
