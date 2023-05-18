@@ -8,42 +8,33 @@
     <script src="./vue.js"></script>
     <style>
         .verde {
-            color: green;
+            background-color: green;
         }
         .negrito {
             font-weight: bold;
+        }
+        .azul {
+            background-color: blue;
         }
     </style>
 </head>
 <body>
     <div id="app">
-        <!--Deixar só os dois pontos é forma mais elegante e enxuta de digitar o v-bind-->
-        <a href="www.google.com.br" :href="site" target="_blank">Site</a> <!--Se eu coloco dois href, ele vai pegar o da direita, isso é sobreposição de atributo-->
-        <p v-bind:class="cor" class="negrito">Entendendo a diretiva v-bind</p> <!--Se eu coloco duas classes, o vue tem a inteligencia de aplicar as duas-->
-        <input type="text" v-bind:placeholder="instrucaoPlaceholder">
-        <input type="checkbox" v-bind:checked="check">
+        {{2+2}}
+        <input :value="2+2" :class="teste ? 'verde' : estilo">
     </div>
     <script>
-        /**
-         * geralmente atribui-se o objeto Vue á const vm (ViewModel) por convenção, mas não é necessário.
-         * o objeto Vue espera receber o objeto options que pode ser atribuido antes, ou passado direto como está sendo feito abaixo
-         * data contem as variáveis/atributos reativos que se encaixam no contexto do elemento (el) selecionado
-         */
         const vm = new Vue({
             el: "#app",
             data: {
-                site: 'http://jorgesantana.net.br',
-                cor: 'verde',
-                instrucaoPlaceholder: 'Aqui fica o placeholder',
-                check: true
+                mensagem: 'Expressão',
+                estilo: "azul",
+                teste: false
             },
             methods: {
                 
             }
         }) 
-
-        console.log(vm)
-
     </script>
 </body>
 </html>
