@@ -14,6 +14,16 @@
 
 <body>
     <div id="app">
+        <button @click="adicionarElemento()">Adicionar Elemento</button>
+        <button @click="removerElemento()">Remover Elemento</button>
+        <button @click="atualizarElemento()">Atualizar Elemento</button>
+        <ul>
+            <li v-for="c in comentarios" :key="c.id">{{c.id}} - {{c.comentario}}</li>
+        </ul>
+        <hr>
+        <ul>
+            <li v-for="n in numero">{{n}}</li>
+        </ul>
         <ul>
             <li v-for="(curso, chave) in cursos" v-text="chave + ' - ' + curso"></li>
         </ul>
@@ -51,6 +61,12 @@
         const vm = new Vue({
             el: '#app',
             data: {
+                comentarios: [
+                    {id: 1, comentario: 'Comentário 1'},
+                    {id: 2, comentario: 'Comentário 2'},
+                    {id: 3, comentario: 'Comentário 3'},
+                ],
+                numero: 5,
                 cursos: ['Laravel', 'Web completo', 'Banco de dados', 'Solid', 'Angular'],
                 cursos2: {
                     1000: {
@@ -76,8 +92,27 @@
                     misturado[2] = this.publicacoes[1]
 
                     this.publicacoes = misturado
-                }
+                },
+                adicionarElemento() {
+                    let ultimo = this.comentarios.length
+                    this.comentarios.push({
+                        id: ultimo + 1,
+                        comentario: 'Comentário ' + (ultimo + 1)
+                    })
+                },
+                removerElemento() {
+                    this.comentarios.pop()
+                },
+                atualizarElemento() {
+                    // this.comentarios[1] = {id: 1, comentarios: 'Comentário 2 atualizado'}
+                    // Desse jeito, o comentário atualiza, mas o DOM não. Não é reativo
 
+                    this.$set( // método nativo do Vue para atualizar o valor de um array de forma reativa
+                        this.comentarios, // array a ser modificado
+                        1, // índice do valor que vai ser modificado
+                        {id: 1, comentarios: 'Comentário 2 atualizado'} // novo valor
+                    )
+                }
             }
         })
 
