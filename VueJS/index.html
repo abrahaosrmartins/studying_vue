@@ -14,22 +14,10 @@
 
 <body>
     <div id="app">
-        <h4>Adicionar Pacientes</h4>
-        <span>Nome: </span><input type="text" id="inputNome"><br>
-        <span>Idade: </span><input type="text" id="inputIdade"><br>
-        <span>Plano: </span><input type="text" id="inputPlano"><br>
-        <button @click="adicionarPaciente()">Adicionar</button>
-        <hr>
-        <h4>Último paciente cadastrado</h4>
-        <p v-if="pacientes.length > 0">
-            {{ultimoPaciente}}
-        </p>
-        <hr>
-        <h4>Pacientes plano ouro</h4>
-        <p v-for="p in pacientesPlanoOuro">{{p.nome}}</p>
-        <hr>
-        <h4>Pacientes Cadastrados</h4>
-        <p v-for="p in pacientes">{{p.nome}}</p>
+        {{paciente}}<br>
+        <!--<input type="text" :value="paciente" @keyup="paciente = $event.target.value">-->
+        <input type="text" v-model="paciente">
+
     </div>
 
     <script>
@@ -37,31 +25,13 @@
         const vm = new Vue({
             el: '#app',
             data: {
-                pacientes: []
+                paciente: 'Abrahão Martins'
             },
             methods: {
-                adicionarPaciente() {
-                    this.pacientes.push({
-                        nome: inputNome.value,
-                        idade: inputIdade.value,
-                        plano: inputPlano.value
-                    })
-                }
+                
             },
             computed: {
-                ultimoPaciente() {
-                    let key = this.pacientes.length - 1
-                    let txt = ''
-
-                    txt += 'Paciente ' + this.pacientes[key].nome
-                    txt += ', idade ' + this.pacientes[key].idade
-                    txt += ', plano ' + this.pacientes[key].plano
-
-                    return txt
-                },
-                pacientesPlanoOuro() {
-                    return this.pacientes.filter(item => item.plano == 'Ouro')
-                }
+                
             }
         })
 
