@@ -6,30 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./vue.js"></script>
-    <title>Estudando Vue.js</title>
-    <style></style>
+    <title>Avançando com Vue.js 3</title>
 </head>
 
 <body>
-    <div id="app">
-        
-    </div>
 
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <h2>{{ descricao }}</h2>
+    </div>
     <script>
-        // não é muito encontrado, mas vale a pena saber, né
-        const vm = new Vue({
-            template: `
-                <div>
-                    <h1>{{ texto1 }}</h1>
-                    <p>{{ texto2 }}</p>
-                </div>
-            `,
-            data: {
-                texto1: 'Template',
-                texto2: 'Formas alternativas de carregar o template'
+        const BoasVindasVueApp = {
+            data() { // é a mesma coisa que data: function() {
+                return {
+                    titulo: 'Olá Vue.js 3',
+                    descricao: 'Estamos avançando com Vue.js 3'
+                }
             }
-        })
-        vm.$mount('#app')
+        }
+        Vue.createApp(BoasVindasVueApp).mount('#app')
     </script>
 </body>
 
