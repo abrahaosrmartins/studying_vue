@@ -1,0 +1,21 @@
+Diário de aula - curso de Vue completo e vuex
+
+Obs.: Acabei não anotando nada antes dessas aulas pq a ideia veio nela.
+
+13 - Cuidado ao utilizar arrow functions dentro do objeto vue. Elas não consideram o this com sendo uma instancia do Vue, mas sim do Window, ou de uma função, caso esteja definida dentro de uma.
+16 - passando o próprio event $event dentro do v-on (@)
+17 - praticando
+18 - explorando modificadores dos eventos (event.preventDefault())
+19 - selecionar elemento filho do id que está sendo instanciado no Vue
+20 - v-if v-else-if v-else @blur
+21 - v-show, bom pra usar nos tooltips
+22 - v-html
+23 - v-text
+24 - v-once
+25 - v-for
+26 - v-for parte 2
+27 - v-for parte 3 - atributo key (:key)
+28 - v-for parte 4 
+29 - v-for parte 5 push e pop em arrays, modificar valores do meio do array usando $set do Vue.
+30 - tag template
+31 - propriedades computadas
