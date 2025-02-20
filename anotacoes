@@ -19,3 +19,11 @@ Obs.: Acabei não anotando nada antes dessas aulas pq a ideia veio nela.
 29 - v-for parte 5 push e pop em arrays, modificar valores do meio do array usando $set do Vue.
 30 - tag template
 31 - propriedades computadas
+32 - propriedades computadas parte 2
+    para saber mais: Objeto literal: https://www.locaweb.com.br/blog/temas/codigo-aberto/objeto-literal-colecao-de-objetos/ filter do javascript, computed
+33 - v-model
+34 - praticando v-model
+    Obs.: quando trabalhamos com input dos tipos radio e checkbox, temos que utilizar o atributo name para o javascript entender qual está selecionado. O v-model, torna isso opcional 
+35 - propriedade watch
+    bom exemplo para usar em busca
+    
