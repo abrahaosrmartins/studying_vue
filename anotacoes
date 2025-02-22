@@ -2,7 +2,8 @@ Diário de aula - curso de Vue completo e vuex
 
 Obs.: Acabei não anotando nada antes dessas aulas pq a ideia veio nela.
 
-13 - Cuidado ao utilizar arrow functions dentro do objeto vue. Elas não consideram o this com sendo uma instancia do Vue, mas sim do Window, ou de uma função, caso esteja definida dentro de uma.
+13 - Cuidado ao utilizar arrow functions dentro do objeto vue. Elas não consideram o this com sendo uma instancia do
+Vue, mas sim do Window, ou de uma função, caso esteja definida dentro de uma.
 16 - passando o próprio event $event dentro do v-on (@)
 17 - praticando
 18 - explorando modificadores dos eventos (event.preventDefault())
@@ -15,15 +16,33 @@ Obs.: Acabei não anotando nada antes dessas aulas pq a ideia veio nela.
 25 - v-for
 26 - v-for parte 2
 27 - v-for parte 3 - atributo key (:key)
-28 - v-for parte 4 
+28 - v-for parte 4
 29 - v-for parte 5 push e pop em arrays, modificar valores do meio do array usando $set do Vue.
 30 - tag template
 31 - propriedades computadas
 32 - propriedades computadas parte 2
-    para saber mais: Objeto literal: https://www.locaweb.com.br/blog/temas/codigo-aberto/objeto-literal-colecao-de-objetos/ filter do javascript, computed
+para saber mais: Objeto literal: https://www.locaweb.com.br/blog/temas/codigo-aberto/objeto-literal-colecao-de-objetos/
+filter do javascript, computed
 33 - v-model
 34 - praticando v-model
-    Obs.: quando trabalhamos com input dos tipos radio e checkbox, temos que utilizar o atributo name para o javascript entender qual está selecionado. O v-model, torna isso opcional 
+Obs.: quando trabalhamos com input dos tipos radio e checkbox, temos que utilizar o atributo name para o javascript
+entender qual está selecionado. O v-model, torna isso opcional
 35 - propriedade watch
-    bom exemplo para usar em busca
-    
+bom exemplo para usar em busca
+36 - Iniciando projeto montando lanche
+37 - implementando a interface do projeto
+38 - usando as propriedades computada para definir as imagens que vão ser usadas
+39 - implementando a interface do projeto, parte 2
+40 - usando v-model pra alterar o pão do lanche
+41 - ainda usando v-model e propriedades computadas
+42 - ainda no projeto
+43 - ainda no projeto
+44 - ainda no projeto (usando o watch nessa aula)
+45 - passando objetos no atributo class do html pra modificar reativamente
+46 - fazendo a mesma coisa, só que com array ao invés de Objeto
+47 - usando v-bind para definir styles com com objetos
+Obs.: Objeto literal não suporta traço (-), então quando for passar o nome de uma propriedade, tem que colocar entre
+aspas, ou usar camelCase
+48 - fazendo a mesma coisa que a 47, só que usando computed
+49 - falando do $ref pela primeira vez
+Obs.: $ref não é reativo
