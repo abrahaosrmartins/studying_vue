@@ -46,3 +46,10 @@ aspas, ou usar camelCase
 48 - fazendo a mesma coisa que a 47, só que usando computed
 49 - falando do $ref pela primeira vez
 Obs.: $ref não é reativo
+50 - DOM (Document Object Model, ou Modelo de Documento por Objetos.) e VIRTUAL DOM. Como o vue, e o outros frameworks
+usam o VD para atualizar o DOM  e ganhar performance. Se eu entendi bem, o DOM é uma representação orientada a objetos do
+documento HTML, (ou XML), ou seja, da página web. Essa representação pega os elementos do documento e transforma em objetos
+manipulaveis por uma linguagem de script (javascript, no nosso caso). O VD é uma versão virtual manipulada pelo framework
+(Vue, no nosso caso) porque o manipular o DOM real é muito custoso e verboso
+51 - Cuidado ao manipular o mesmo elemento pelo DOM e pelo VD. Isso pode gerar inconsistencias. Nessa aula, ele dá
+exemplos muito bons disso
