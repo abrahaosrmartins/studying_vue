@@ -53,3 +53,24 @@ manipulaveis por uma linguagem de script (javascript, no nosso caso). O VD é um
 (Vue, no nosso caso) porque o manipular o DOM real é muito custoso e verboso
 51 - Cuidado ao manipular o mesmo elemento pelo DOM e pelo VD. Isso pode gerar inconsistencias. Nessa aula, ele dá
 exemplos muito bons disso
+52 - usando o vue.$mount pra carregar o template. No persona, isso é usado, mas é um pouco diferente. Será que é pela mudança
+de vesão do Vue? nessa aula, o prof ainda usa o 2
+53 - usando a propriedade template do objeto Vue para carregar um template.
+obs.: não é tão interessante fazer dessa forma, mas foi útil pq aprendi que usar crase ao invés de aspas serve tambem para preservar as quebras de linha
+54 - só um recado antes da att para o vue 3
+55 - Instalando Vue sem cli.
+obs.: aqui que ele fala das mudanças na instanciação do objetov vue, e é assim que é feito la no persona
+56 - apenas intro da proxima seção
+57 - instalando node e npm no windows
+58 - instalando node e npm no linux
+59 - instalando node e npm no osx
+60 - instalando vue cli
+61 - usando vue cli para criar um projeto vue padrão
+62 - usando vue cli para criar um projeto vue customizado
+63 - Definindo a porta em que a aplicação será servida
+64 - Criando projeto vue usando vue ui.
+65 - gerenciando o projeto usando o ui
+Obs.: Bem legal, essa aula. Prrincipalmente a aba de tarefas, do ui, que mostra as dependencias instaladas e as estatisticas do projeto.
+66 - Entendendo a estrutura de pastas do projeto vue.
+obs.: tag noscript é utilizada quando o navegador não tem suporte ao javascript, ou esse suporte está desligado
+67 - Entendendo a estrutura de pastas do projeto vue. parte 2
