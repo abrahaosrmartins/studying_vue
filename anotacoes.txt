@@ -74,3 +74,34 @@ Obs.: Bem legal, essa aula. Prrincipalmente a aba de tarefas, do ui, que mostra 
 66 - Entendendo a estrutura de pastas do projeto vue.
 obs.: tag noscript é utilizada quando o navegador não tem suporte ao javascript, ou esse suporte está desligado
 67 - Entendendo a estrutura de pastas do projeto vue. parte 2
+obs.: aula boa para entender a melhor a diferença entre o package.json e o package-lock.json
+68 - entendendo a diferença entre ~ e ^ na definição da versão de cada pacote no package.json
+69 - como reconstruir as dependencias do projeto usando o npm (se precisar excluir o node_modules, por exemplo)
+obs.: npm install le o package-lock e faz download das dependencias
+70 - instalando git no windows
+71 - instalando git no linux
+72 - instalando git no osx
+73 - diferenciando git, github e bitbucket
+74 - configs globais do git
+obs.: ensina a começar um repo git localmente
+75 - criando conta no bitbucket
+76 - conectando repositorio local com o remoto no bitbucket
+77 - trabalhando com alterações no git (status, add, reset, commit e log)
+78 - git push
+79 - git clone
+80 - criando conta de usuário no Heroku
+81 - criando um app no Heroku
+82 - Instalando heroku cli no windows
+83 - Instalando heroku cli no linux
+84 - Instalando heroku cli no osx
+85 - Instalando o Express (Framework backend para o Node)
+obs.: tem que criar uma camada backend para servir a aplicação frontend la no heroku. Isso acontece em toda cloud?
+86 - Criando um servidor web utilizando node e express.
+87 - Servindo o app vue de produção por meio do express. Basicamente fazendo a versão de prod do app
+88 - configurando um comandono package.json para iniciar o servidor web
+89 - conectando o projeto local ao repositório no heroku
+90 - Falando de ci/cd 
+obs.: eu posso subir a aplicação diretamente no heriku. Não preciso colocar no github ou bitbucket. Inclusive o Heroku tem
+suporte a pipeline de deploy
+91 - Fazendo o deploy, de fato, no Heroku (muito legal essa aula)
+92 - instalando o Vue Devtools
