@@ -105,3 +105,15 @@ obs.: eu posso subir a aplicação diretamente no heriku. Não preciso colocar n
 suporte a pipeline de deploy
 91 - Fazendo o deploy, de fato, no Heroku (muito legal essa aula)
 92 - instalando o Vue Devtools
+93 - instalando plugins no Vue, via cli
+94 - variaveis de ambiente (criando um .env) e como acessa-las
+95 - variáveis de ambiente e modos de build parte 1
+96 - variáveis de ambiente e modos de build parte 2
+obs.: da pra fazer vaios .env customizados para cada build (dev, prod, build customizada, etc...)
+97 - ESLint parte 1
+obs.: configurar o eslint direto no projeto, no package.json, ao invés da IDE. o linter impede o código de compilar,
+se a regra não for seguida. Muito legal
+98 - ESLint parte 2
+obs.: aqui ele fala de correção automática
+99 - Customizando o webpack. (conjunto de pacotes estáticos que é responsável por buildar a aplicação)
+100 - Introdução a proxima seção. criando aplicações desktop
