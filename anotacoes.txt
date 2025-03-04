@@ -117,3 +117,4 @@ se a regra não for seguida. Muito legal
 obs.: aqui ele fala de correção automática
 99 - Customizando o webpack. (conjunto de pacotes estáticos que é responsável por buildar a aplicação)
 100 - Introdução a proxima seção. criando aplicações desktop
+101 - Iniciando projeto com Electron Builder (aplicações desktop)
