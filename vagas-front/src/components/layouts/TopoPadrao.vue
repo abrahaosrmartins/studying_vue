@@ -24,6 +24,9 @@
 </template>
 
 <script>
+export default {
+    name: 'TopoPadrao'
+}
 </script>
 
 <style></style>
