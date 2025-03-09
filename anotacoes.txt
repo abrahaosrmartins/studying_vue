@@ -118,3 +118,8 @@ obs.: aqui ele fala de correção automática
 99 - Customizando o webpack. (conjunto de pacotes estáticos que é responsável por buildar a aplicação)
 100 - Introdução a proxima seção. criando aplicações desktop
 101 - Iniciando projeto com Electron Builder (aplicações desktop)
+102 - rodando o app desktop.
+103 - iniciando o novo projeto (vagas-front) pra estudar componentes
+104 - Single File Component ou Single File Template SFC ou SFT. Fazendo o esquelto de um componente básico
+105 - Criando novos componentes do layout basico
+106 - 
