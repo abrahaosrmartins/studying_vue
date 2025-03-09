@@ -130,5 +130,25 @@ não é <script setup>. Ainda não sei porque, nem sei se isso é uma regra. Ten
 obs.: posso selecionar o componente usando PascalCase e chamar ele no template usando kebab-case. Ou manter o PascalCase, tambem.
 108 - Adicionando bootstrap ao projeto e criando a primeira versão da navbar
 obs.: depois eu queria fazer um ds pra esse projeto.
-109 - 
+109 - Criando componentes adicionais Home e PublicarVagas
 obs.: percebi que o componente Conteudo estava sendo renderizado no app.vue mesmo sem colocar o export default. como isso funciona?
+Resposta: Não funciona. Tive que colocar, pra ele entender que é um componente.
+110 - usando style scoped para os estilo se manter somente dentro do escopo do componente
+obs.: o estilo é importado para o html compilado na ordem de hierarquia da compilação App -> Conteudo -> Home,
+então o estilo de home é prevalecido pq está por ultimo no documento.
+O scoped cria um hash de identificação para os elementos do componente. O que os diferencia dos demais. Algo como [data-v-239528745]
+111 - Mantendo o estilo do componente restrito ao componente, agora com <style module>
+obs.: quando trabalhamos com atributo module no style, todos os seletores css definidos pela notação de class e id são carregados para uma propriedade
+da instancia do componente chamada $style. Através do acesso a essa propriedade, conseguimos recuperar esses estilos e usa-los no template
+obs.: faz o estilo que está sendo aplicado nas tags (h1, p, div, etc...), se perder. Considera apenas classes e ids
+112 - importando componentes usando o alias @
+obs.: usando o @, o webpack sabe que você está apontando para o diretório 'src'.
+Mas na feedz, ele não funciona assim. Será que tem como customizar o @ ou lá foi implementado errado? Verifiquei o fdz-celebration-page
+113 - Lifecycle Hooks - ciclo de vida dos componentes.
+obs.: nessa aula ele só mostra vários hooks. Na próxima, vai entrar nos detalhes.
+Ele define os métodos com o nome direto. Sem o prefixo "on", mas a doc coloca o prefixo. Aparentemente funciona. Preciso confirmar isso.
+
+
+Perguntas extras:
+- Como funciona o export default do javascript?
+- o que é um webpack?
