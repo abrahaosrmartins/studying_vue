@@ -122,4 +122,13 @@ obs.: aqui ele fala de correção automática
 103 - iniciando o novo projeto (vagas-front) pra estudar componentes
 104 - Single File Component ou Single File Template SFC ou SFT. Fazendo o esquelto de um componente básico
 105 - Criando novos componentes do layout basico
-106 - 
+106 - Definindo nomes personalizados para o componente.
+obs.: nome diferente do que está definido no arquivo.
+obs.: nessa aula ele cita o export default do componente. Vi no persona que, aparentemente, usa o export default quando
+não é <script setup>. Ainda não sei porque, nem sei se isso é uma regra. Tenho que pesquisar. Por enquanto vou só seguir o curso. Depois volto nessas dúvidas
+107 - Seletores do componente e kebab-case
+obs.: posso selecionar o componente usando PascalCase e chamar ele no template usando kebab-case. Ou manter o PascalCase, tambem.
+108 - Adicionando bootstrap ao projeto e criando a primeira versão da navbar
+obs.: depois eu queria fazer um ds pra esse projeto.
+109 - 
+obs.: percebi que o componente Conteudo estava sendo renderizado no app.vue mesmo sem colocar o export default. como isso funciona?
