@@ -1,2 +1,3 @@
-114 - 
+114 - tudo começa com a instancia do componente pai da aplicação (provavelmente o app.js instanciado no main.js).
+Esse componente tem seu ciclo de vida, e cada componente que ele chama tem seu próprio ciclo de vida.
 115 - 
