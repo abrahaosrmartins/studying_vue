@@ -147,6 +147,11 @@ Mas na feedz, ele não funciona assim. Será que tem como customizar o @ ou lá 
 113 - Lifecycle Hooks - ciclo de vida dos componentes.
 obs.: nessa aula ele só mostra vários hooks. Na próxima, vai entrar nos detalhes.
 Ele define os métodos com o nome direto. Sem o prefixo "on", mas a doc coloca o prefixo. Aparentemente funciona. Preciso confirmar isso.
+obs.: acabei de descobrir que o curso só usa options api.
+114 - ciclo de vida do componente. - criação e montagem
+obs.: anotações dessa aula estão em anotacoesLifeCycleHooks.txt
+115 - ciclo de vida do componente.  - atualização e montagem
+obs.: anotações dessa aula estão em anotacoesLifeCycleHooks.txt
 
 
 Perguntas extras:
