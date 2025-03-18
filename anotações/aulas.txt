@@ -150,10 +150,10 @@ Ele define os métodos com o nome direto. Sem o prefixo "on", mas a doc coloca o
 obs.: acabei de descobrir que o curso só usa options api.
 114 - ciclo de vida do componente. - criação e montagem
 obs.: anotações dessa aula estão em anotacoesLifeCycleHooks.txt
-115 - ciclo de vida do componente.  - atualização e montagem
+115 - ciclo de vida do componente.  - atualização e desmontagem
 obs.: anotações dessa aula estão em anotacoesLifeCycleHooks.txt
-
-
-Perguntas extras:
-- Como funciona o export default do javascript?
-- o que é um webpack?
+116 - Renderização dinâmica de componentes. tag <component>
+117 - Lifecycle Hooks ativação e desativação de componentes activated() e deactivated()
+obs.: aqui ele mostra um bom exemplo do beforeUnmount e unmounted funcionando.
+obs.: usar o activated e o deactivated é mais performático do que montar, desmontar e remontar, mas aí tem que usar a tag <keep-alive> junto
+que mantem tudo dentro dela com a instancia preservada

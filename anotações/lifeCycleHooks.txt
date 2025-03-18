@@ -1,3 +1,21 @@
-114 - tudo começa com a instancia do componente pai da aplicação (provavelmente o app.js instanciado no main.js).
+114 - tudo começa com a instancia do componente pai da aplicação (provavelmente o App.vue instanciado no main.js).
 Esse componente tem seu ciclo de vida, e cada componente que ele chama tem seu próprio ciclo de vida.
-115 - 
+    - Instância do componente
+    - Iniciar eventos e ciclo de vida
+    beforeCreate(): antes mesmo do carregamento das propriedades reativas.Aqui da pra fazer, por exemplo,
+    uma validação do usuário, antes de criar o componente. Pode ser que um jwt está armazenado no localstorage,
+    e pode ser usado aqui para gerenciar permissões de acesso
+    - Inicialização de injeçẽos de dependencias e propriedades reativas. Aqui tambem são injetadas as propriedades vindas de outros componentes.
+    created(): Agora da pra acessar as propriedades da instancia do componente.
+    - Associa a instancia do componente a um elemento html (Faz uma verificação aqui, que eu não entendi muito bem. Tenho que verificar isso)
+    beforeMount(): Aqui da pra consumir os dados do back.
+    - Monta o template já compilado dentro de um elemento html
+    mounted(): 
+115 - Seguindo para os outros hooks
+    beforeUpdate(): Antes do componente sofrer alguma alteração
+    - Alteração do componente
+    updated(): logo depois da alteração
+    - app.unmount() é chamado
+    beforeUnmount(): logo antes de desmontar um componente (por exemplo, quando ele sumir por causa de um v-if)
+    unmounted(): logo depois de desmontar.
+117

@@ -1,0 +1,17 @@
+- Reatividade
+- Lifecycle Hooks no detalhe
+    https://www.alura.com.br/artigos/vuejs-ciclo-vida-componentes?srsltid=AfmBOoqmpGhi8h_DqPGljpj9Monkb1PMOj5K8Gy-GPiEwAJVg8te_4cR
+- Propriedades computadas
+- Interpretação no Lado do Servidor (SSR)
+    https://pt.vuejs.org/guide/scaling-up/ssr.html#why-ssr
+- Web Vitals
+    https://web.dev/articles/vitals?hl=pt-br
+- Como funciona o export default do javascript?
+- o que é um webpack?
+- por que data é declarado assim ao inves de um objeto literal, agora?
+    data: () => ({
+        conteudo: 'home'
+    }),
+
+- quais as diferenças reais entre usar activated/deactivated e mounted/unmounted? O professor falou que o primeiro caso é mais performático,
+mas quando é bom usar um ou outro?
