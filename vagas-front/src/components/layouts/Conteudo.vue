@@ -1,8 +1,15 @@
 <template>
     <div>
         <h1>Componente Conteúdo</h1>
-        <home />
-        <publicar-vaga />
+        <!-- renderizar de modo dinâmico os componentes home e publicar-vaga -->
+        <button>Atualizar</button>
+        <button @click="conteudo = 'home'">Home</button>
+        <button @click="conteudo = 'publicar-vaga'">Publicar Vaga</button>
+        <!-- <home />
+        <publicar-vaga /> -->
+        <keep-alive>
+            <component :is="conteudo" />
+        </keep-alive>
     </div>
 </template>
 
@@ -16,42 +23,45 @@ export default {
         Home,
         PublicarVaga
     },
+    data: () => ({
+        conteudo: 'home'
+    }),
     methods: {
         // code
     },
-    beforeCreate() {
-        console.log('Antes de criar');
-    },
-    created() {
-        console.log('Criado');
-    },
+    // beforeCreate() {
+    //     console.log('Antes de criar');
+    // },
+    // created() {
+    //     console.log('Criado');
+    // },
     beforeMount() {
         console.log('Antes de montar');
     },
     mounted() {
         console.log('Montado');
     },
-    beforeUpdate() {
-        console.log('Antes de atualizar');
-    },
-    updated() {
-        console.log('Atualizado');
-    },
+    // beforeUpdate() {
+    //     console.log('Antes de atualizar');
+    // },
+    // updated() {
+    //     console.log('Atualizado');
+    // },
     beforeUnmount() {
         console.log('Antes de desmontar');
     },
     unmounted() {
         console.log('Desmontado');
     },
-    errorCaptured() {
-        console.log('Erro capturado');
-    },
-    renderTracked() {
-        console.log('Re-renderizado');
-    },
-    renderTriggered() {
-        console.log('Re-renderização acionada');
-    },
+    // errorCaptured() {
+    //     console.log('Erro capturado');
+    // },
+    // renderTracked() {
+    //     console.log('Re-renderizado');
+    // },
+    // renderTriggered() {
+    //     console.log('Re-renderização acionada');
+    // },
     activated() {
         console.log('Componente é ativado');
     },
