@@ -157,3 +157,4 @@ obs.: anotações dessa aula estão em anotacoesLifeCycleHooks.txt
 obs.: aqui ele mostra um bom exemplo do beforeUnmount e unmounted funcionando.
 obs.: usar o activated e o deactivated é mais performático do que montar, desmontar e remontar, mas aí tem que usar a tag <keep-alive> junto
 que mantem tudo dentro dela com a instancia preservada
+118 - 
