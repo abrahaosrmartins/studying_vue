@@ -8,12 +8,24 @@
 <script>
 export default {
     name: 'Indicador',
-    props: [
-        'titulo',
-        'indicador',
-        'bg',
-        'color'
-    ],
+    props: {
+        titulo: {
+            type: String,
+            default: ''
+        },
+        indicador: {
+            type: String,
+            default: ''
+        },
+        bg: {
+            type: String,
+            default: ''
+        },
+        color: {
+            type: String,
+            default: ''
+        },
+    },
     computed: {
         estilo() {
             return `h-100 p-5 rouded-3 border ${this.bg} ${this.color}`

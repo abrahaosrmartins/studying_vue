@@ -5,6 +5,13 @@
                 <pesquisar-vaga />
             </div>
         </div>
+        <div v-for="(vaga, index) in vagas" :key="index" class="row mt-5"> <!-- Tive que colocar uma key pq o eslint barrou -->
+            <div class="col">
+                <vaga :titulo-vaga-teste="vaga.tituloVagaTeste" :descricao-vaga="vaga.descricaoVaga" :salario="vaga.salario"
+                    :modalidade="vaga.modalidade" :tipo="vaga.tipo"
+                    :publicacao="formataDataDePublicacao(vaga.publicacao)" />
+            </div>
+        </div>
         <div class="row mt-5">
             <div class="col-4">
                 <indicador titulo="Vagas abertas" indicador="25" bg="bg-dark" color="text-white" />
@@ -22,19 +29,82 @@
 <script>
 import PesquisarVaga from '@/components/comuns/PesquisarVaga.vue';
 import Indicador from '@/components/comuns/Indicador.vue';
+import Vaga from '@/components/comuns/Vaga.vue';
 
 export default {
     name: 'Home',
     components: {
         PesquisarVaga,
-        Indicador
+        Indicador,
+        Vaga
     },
     data: () => ({
-        usuariosOnline: 0
+        usuariosOnline: 0,
+        vagas: [
+            {
+                tituloVagaTeste: 'Analista Programador PHP Pleno',
+                descricaoVaga: 'Profissional com conhecimentos em PHP, Laravel e MySQL. Necessário 3 anos de experiências. Atuará na manutenção de sistemas legados da empresa.',
+                salario: 6000,
+                modalidade: 'Home Office',
+                tipo: 'PJ',
+                publicacao: '2021-10-10'
+            },
+            {
+                tituloVagaTeste: 'Programador JavaScript Angular',
+                descricaoVaga: 'Profissional com conhecimentos avançados em JavaScript e Angular.',
+                salario: 5000,
+                modalidade: 'Presencial',
+                tipo: 'CLT',
+                publicacao: '2021-10-07'
+            },
+            {
+                tituloVagaTeste: 'Programador JavaScript Vue',
+                descricaoVaga: 'Profissional com conhecimentos avançados em JavaScript e Vue.',
+                salario: 5000,
+                modalidade: 'Home Office',
+                tipo: 'CLT',
+                publicacao: '2021-10-06'
+            },
+            {
+                tituloVagaTeste: 'Analista de Banco de Dados Sênior',
+                descricaoVaga: 'Domínio dos bancos de dados SQL Server, Oracle, Postgre e MySQL',
+                salario: 9000,
+                modalidade: 'Presencial',
+                tipo: 'PJ',
+                publicacao: '2021-10-06'
+            },
+            {
+                tituloVagaTeste: 'Programador Web Júnior',
+                descricaoVaga: 'Conhecimentos básicos em HTML, CSS, JavaScript, Bootstrap, PHP e MySQL',
+                salario: 3000,
+                modalidade: 'Presencial',
+                tipo: 'CLT',
+                publicacao: '2021-10-05'
+            }
+        ],
     }),
     methods: {
         getUsuariosOnline() {
             this.usuariosOnline = Math.floor(Math.random() * 101) // entre 0 e 100
+        },
+        formataDataDePublicacao(data) {
+            const meses = [
+                'Janeiro',
+                'Fevereiro',
+                'Março',
+                'Abril',
+                'Maio',
+                'Junho',
+                'Julho',
+                'Agosto',
+                'Setembro',
+                'Outubro',
+                'Novembro',
+                'Dezembro'
+            ];
+            const dataNoFormatoArray = data.split('-');
+
+            return `${dataNoFormatoArray[2]} de ${meses[dataNoFormatoArray[1] - 1]} de ${dataNoFormatoArray[0]}`
         }
     },
     created() {

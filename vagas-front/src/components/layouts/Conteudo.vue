@@ -5,8 +5,6 @@
         <button>Atualizar</button>
         <button @click="conteudo = 'home'">Home</button>
         <button @click="conteudo = 'publicar-vaga'">Publicar Vaga</button>
-        <!-- <home />
-        <publicar-vaga /> -->
         <keep-alive>
             <component :is="conteudo" />
         </keep-alive>
@@ -26,33 +24,33 @@ export default {
     data: () => ({
         conteudo: 'home'
     }),
-    methods: {
-        // code
-    },
+    // methods: {
+    //     // code
+    // },
     // beforeCreate() {
     //     console.log('Antes de criar');
     // },
     // created() {
     //     console.log('Criado');
     // },
-    beforeMount() {
-        console.log('Antes de montar');
-    },
-    mounted() {
-        console.log('Montado');
-    },
+    // beforeMount() {
+    //     console.log('Antes de montar');
+    // },
+    // mounted() {
+    //     console.log('Montado');
+    // },
     // beforeUpdate() {
     //     console.log('Antes de atualizar');
     // },
     // updated() {
     //     console.log('Atualizado');
     // },
-    beforeUnmount() {
-        console.log('Antes de desmontar');
-    },
-    unmounted() {
-        console.log('Desmontado');
-    },
+    // beforeUnmount() {
+    //     console.log('Antes de desmontar');
+    // },
+    // unmounted() {
+    //     console.log('Desmontado');
+    // },
     // errorCaptured() {
     //     console.log('Erro capturado');
     // },
@@ -62,12 +60,12 @@ export default {
     // renderTriggered() {
     //     console.log('Re-renderização acionada');
     // },
-    activated() {
-        console.log('Componente é ativado');
-    },
-    deactivated() {
-        console.log('Componente é desativado');
-    }
+    // activated() {
+    //     console.log('Componente é ativado');
+    // },
+    // deactivated() {
+    //     console.log('Componente é desativado');
+    // }
 }
 </script>
 
