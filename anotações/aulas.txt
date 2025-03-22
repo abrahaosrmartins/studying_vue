@@ -164,3 +164,13 @@ que mantem tudo dentro dela com a instancia preservada
 122 - Estilo visual computado
 123 - props são reativas
 obs.: a diferenças entre passar um método com ou sem parenteses, é que sem parenteses é a referencia dele, e com parentes, é o resultado dele
+124 - Criando componente vagas
+125 - Ainda no componente vagas (agora sim passando props)
+126 - Nomeação de propriedades
+127 - Tipagem de props
+obs.: é dessa forma que é mais usado na feedz
+128 - Validação das props (required e validator)
+obs.: validator retorna true ou false para dizer se o valor da prop passada é válido. Se for inválido, ele vai mostrar um warning no navegador.
+obs.: Ficar atento ao ciclo de vida do componente. As props são injetadas antes da criação do componente, então aqui da pra fazer validação com elas,
+mas não da pra usar as propriedades da instancia do componente ("data:" por exemplo). (olhar anotação do ciclo de vida)
+129 - 
