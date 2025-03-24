@@ -1,17 +1,47 @@
+__________________________________________________________________________________________________________________________________________________________________
 - Reatividade
+
+__________________________________________________________________________________________________________________________________________________________________
 - Lifecycle Hooks no detalhe
     https://www.alura.com.br/artigos/vuejs-ciclo-vida-componentes?srsltid=AfmBOoqmpGhi8h_DqPGljpj9Monkb1PMOj5K8Gy-GPiEwAJVg8te_4cR
+
+__________________________________________________________________________________________________________________________________________________________________
 - Propriedades computadas
+
+__________________________________________________________________________________________________________________________________________________________________
 - Interpretação no Lado do Servidor (SSR)
     https://pt.vuejs.org/guide/scaling-up/ssr.html#why-ssr
+
+__________________________________________________________________________________________________________________________________________________________________
 - Web Vitals
     https://web.dev/articles/vitals?hl=pt-br
+
+__________________________________________________________________________________________________________________________________________________________________
 - Como funciona o export default do javascript?
+
+__________________________________________________________________________________________________________________________________________________________________
 - o que é um webpack?
+
+__________________________________________________________________________________________________________________________________________________________________
 - por que data é declarado assim ao inves de um objeto literal, agora?
     data: () => ({
         conteudo: 'home'
-    }),
+    }),   
 
+__________________________________________________________________________________________________________________________________________________________________
 - quais as diferenças reais entre usar activated/deactivated e mounted/unmounted? O professor falou que o primeiro caso é mais performático,
 mas quando é bom usar um ou outro?
+
+__________________________________________________________________________________________________________________________________________________________________
+- Aparentemente tem muitas opções no objeto literal de comfiguração da prop. Depois vou atrás disso. Também tem a opção de não passar nenhuma,
+e aí da pra usar somente um array com os nomes das props em formato de string
+
+__________________________________________________________________________________________________________________________________________________________________
+- Na aula 130, quando o professor ensina a passar um objeto via prop, ao inveś de cada prop nomeada, eu tentei executar o método formataDataDePublicacao no
+diretamente no valor de publicacao em cada vaga no componente Home, mas ele não reconheceu a função, mesmo ela estando no mesmo componente.
+Por que?
+Tentei usar o this, também, mas não deu.
+Foi o lint?
+Não vi.
+Pra funcionar, tive que mandar o método para o componente vaga
+__________________________________________________________________________________________________________________________________________________________________

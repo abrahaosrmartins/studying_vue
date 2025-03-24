@@ -173,4 +173,7 @@ obs.: é dessa forma que é mais usado na feedz
 obs.: validator retorna true ou false para dizer se o valor da prop passada é válido. Se for inválido, ele vai mostrar um warning no navegador.
 obs.: Ficar atento ao ciclo de vida do componente. As props são injetadas antes da criação do componente, então aqui da pra fazer validação com elas,
 mas não da pra usar as propriedades da instancia do componente ("data:" por exemplo). (olhar anotação do ciclo de vida)
-129 - 
+129 - Valor default da prop
+obs.: dá pra usar o default() assim, como método.
+130 - Enviando objeto inteiro via prop, com o v-bind.
+obs.: não tem como usar a forma abreviada. tem que digitar v-bind
