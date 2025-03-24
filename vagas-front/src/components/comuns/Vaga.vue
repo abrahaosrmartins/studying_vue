@@ -1,12 +1,12 @@
 <template>
     <div class="card">
-        <div class="card-header bg-dark text-white">{{ tituloVagaTeste }}</div>
+        <div class="card-header bg-dark text-white">{{ titulo }}</div>
         <div class="card-body">
-            <p>{{ descricaoVaga }}</p>
+            <p>{{ descricao }}</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">
-                Salário: {{ salario }} | Modalidade: {{ modalidade }} | Tipo: {{ tipo }} | Publicação: {{ publicacao }}
+                Salário: {{ salario }} | Modalidade: {{ modalidade }} | Tipo: {{ tipo }} | Publicação: {{ formataDataDePublicacao(publicacao) }}
             </small>
         </div>
     </div>
@@ -16,7 +16,7 @@
 export default {
     name: 'Vaga',
     props: {
-        tituloVagaTeste: {
+        titulo: {
             type: String,
             default: '',
             required: true,
@@ -28,31 +28,47 @@ export default {
                 //return false se for inválida
             }
         },
-        descricaoVaga: {
+        descricao: {
             type: String,
-            default: '',
-            required: true
+            default: 'Não informada',
         },
         salario: {
             type: [Number, String],
             default: 0,
-            required: true
         },
         modalidade: {
             type: String,
-            default: '',
-            required: true
+            default: 'Não informada',
         },
         tipo: {
             type: String,
-            default: '',
-            required: true
+            default: 'Não informado',
         },
         publicacao: {
             type: String,
-            default: '',
-            required: true
+            default: 'Não informada',
         },
+    },
+    methods: {
+        formataDataDePublicacao(data) {
+            const meses = [
+                'Janeiro',
+                'Fevereiro',
+                'Março',
+                'Abril',
+                'Maio',
+                'Junho',
+                'Julho',
+                'Agosto',
+                'Setembro',
+                'Outubro',
+                'Novembro',
+                'Dezembro'
+            ];
+            const dataNoFormatoArray = data.split('-');
+
+            return `${dataNoFormatoArray[2]} de ${meses[dataNoFormatoArray[1] - 1]} de ${dataNoFormatoArray[0]}`
+        }
     }
 }
 </script>

@@ -7,9 +7,7 @@
         </div>
         <div v-for="(vaga, index) in vagas" :key="index" class="row mt-5"> <!-- Tive que colocar uma key pq o eslint barrou -->
             <div class="col">
-                <vaga :titulo-vaga-teste="vaga.tituloVagaTeste" :descricao-vaga="vaga.descricaoVaga" :salario="vaga.salario"
-                    :modalidade="vaga.modalidade" :tipo="vaga.tipo"
-                    :publicacao="formataDataDePublicacao(vaga.publicacao)" />
+                <vaga v-bind="vaga" />
             </div>
         </div>
         <div class="row mt-5">
@@ -42,40 +40,40 @@ export default {
         usuariosOnline: 0,
         vagas: [
             {
-                tituloVagaTeste: 'Analista Programador PHP Pleno',
-                descricaoVaga: 'Profissional com conhecimentos em PHP, Laravel e MySQL. Necessário 3 anos de experiências. Atuará na manutenção de sistemas legados da empresa.',
+                titulo: 'Analista Programador PHP Pleno',
+                descricao: 'Profissional com conhecimentos em PHP, Laravel e MySQL. Necessário 3 anos de experiências. Atuará na manutenção de sistemas legados da empresa.',
                 salario: 6000,
                 modalidade: 'Home Office',
                 tipo: 'PJ',
                 publicacao: '2021-10-10'
             },
             {
-                tituloVagaTeste: 'Programador JavaScript Angular',
-                descricaoVaga: 'Profissional com conhecimentos avançados em JavaScript e Angular.',
+                titulo: 'Programador JavaScript Angular',
+                descricao: 'Profissional com conhecimentos avançados em JavaScript e Angular.',
                 salario: 5000,
                 modalidade: 'Presencial',
                 tipo: 'CLT',
                 publicacao: '2021-10-07'
             },
             {
-                tituloVagaTeste: 'Programador JavaScript Vue',
-                descricaoVaga: 'Profissional com conhecimentos avançados em JavaScript e Vue.',
+                titulo: 'Programador JavaScript Vue',
+                descricao: 'Profissional com conhecimentos avançados em JavaScript e Vue.',
                 salario: 5000,
                 modalidade: 'Home Office',
                 tipo: 'CLT',
                 publicacao: '2021-10-06'
             },
             {
-                tituloVagaTeste: 'Analista de Banco de Dados Sênior',
-                descricaoVaga: 'Domínio dos bancos de dados SQL Server, Oracle, Postgre e MySQL',
+                titulo: 'Analista de Banco de Dados Sênior',
+                descricao: 'Domínio dos bancos de dados SQL Server, Oracle, Postgre e MySQL',
                 salario: 9000,
                 modalidade: 'Presencial',
                 tipo: 'PJ',
                 publicacao: '2021-10-06'
             },
             {
-                tituloVagaTeste: 'Programador Web Júnior',
-                descricaoVaga: 'Conhecimentos básicos em HTML, CSS, JavaScript, Bootstrap, PHP e MySQL',
+                titulo: 'Programador Web Júnior',
+                descricao: 'Conhecimentos básicos em HTML, CSS, JavaScript, Bootstrap, PHP e MySQL',
                 salario: 3000,
                 modalidade: 'Presencial',
                 tipo: 'CLT',
@@ -87,25 +85,6 @@ export default {
         getUsuariosOnline() {
             this.usuariosOnline = Math.floor(Math.random() * 101) // entre 0 e 100
         },
-        formataDataDePublicacao(data) {
-            const meses = [
-                'Janeiro',
-                'Fevereiro',
-                'Março',
-                'Abril',
-                'Maio',
-                'Junho',
-                'Julho',
-                'Agosto',
-                'Setembro',
-                'Outubro',
-                'Novembro',
-                'Dezembro'
-            ];
-            const dataNoFormatoArray = data.split('-');
-
-            return `${dataNoFormatoArray[2]} de ${meses[dataNoFormatoArray[1] - 1]} de ${dataNoFormatoArray[0]}`
-        }
     },
     created() {
         setInterval(this.getUsuariosOnline, 1000) // a cada 1 segundo
