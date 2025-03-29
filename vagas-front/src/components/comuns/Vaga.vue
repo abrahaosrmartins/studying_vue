@@ -6,7 +6,7 @@
         </div>
         <div class="card-footer">
             <small class="text-muted">
-                Salário: {{ salario }} | Modalidade: {{ modalidade }} | Tipo: {{ tipo }} | Publicação: {{ formataDataDePublicacao(publicacao) }}
+                Salário: {{ salario }} | Modalidade: {{ getModalidade }} | Tipo: {{ getTipo }} | Publicação: {{ getPublicacao }}
             </small>
         </div>
     </div>
@@ -49,8 +49,8 @@ export default {
             default: 'Não informada',
         },
     },
-    methods: {
-        formataDataDePublicacao(data) {
+    computed: {
+        getPublicacao() {
             const meses = [
                 'Janeiro',
                 'Fevereiro',
@@ -65,10 +65,24 @@ export default {
                 'Novembro',
                 'Dezembro'
             ];
-            const dataNoFormatoArray = data.split('-');
+            const data = this.publicacao.split('/');
 
-            return `${dataNoFormatoArray[2]} de ${meses[dataNoFormatoArray[1] - 1]} de ${dataNoFormatoArray[0]}`
-        }
+            return `${data[0]} de ${meses[data[1] - 1]} de ${data[2]}`
+        },
+        getModalidade() {
+            switch (this.modalidade) {
+                case '1': return 'Home Office';
+                case '2': return 'Presencial'
+            }
+            return 'Não informada';
+        },
+        getTipo() {
+            switch (this.modalidade) {
+                case '1': return 'CLT';
+                case '2': return 'PJ'
+            }
+            return 'Não informado';
+        },
     }
 }
 </script>
