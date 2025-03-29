@@ -184,3 +184,7 @@ que aqui foi "vaga", o o valor, como nós estamos falando de um objeto, passamos
 recebe é só uma descrição do objeto.
 133 - Armazenando multiplos registros de vaga no localstorage
 134 - Exibindo vagas que estavam no localStorage
+135 - propriedades computadas para modalidade e tipo
+136 - Passando a data de publicação no cadastro da vaga
+137 - Formatando a data no front.
+obs.: Aqui o prof complicou demais. Minha implementação foi bem mais simples
