@@ -14,7 +14,7 @@ export default {
             default: ''
         },
         indicador: {
-            type: String,
+            type: [Number, String],
             default: ''
         },
         bg: {
