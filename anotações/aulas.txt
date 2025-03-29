@@ -177,3 +177,10 @@ mas não da pra usar as propriedades da instancia do componente ("data:" por exe
 obs.: dá pra usar o default() assim, como método.
 130 - Enviando objeto inteiro via prop, com o v-bind.
 obs.: não tem como usar a forma abreviada. tem que digitar v-bind
+131 - Só html do componente PublicarVagas
+132 - Persistindo a vaga no LocalStorage
+obs.: localStorage é nativo do javascript. Na hora de passar chave e valor para ele, são duas strings. A chave pode ser o nome do objeto,
+que aqui foi "vaga", o o valor, como nós estamos falando de um objeto, passamos a versão stringficada de um json, se não, o que o localstorage
+recebe é só uma descrição do objeto.
+133 - Armazenando multiplos registros de vaga no localstorage
+134 - Exibindo vagas que estavam no localStorage

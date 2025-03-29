@@ -45,3 +45,7 @@ Foi o lint?
 Não vi.
 Pra funcionar, tive que mandar o método para o componente vaga
 __________________________________________________________________________________________________________________________________________________________________
+Ainda não entendo bem a diferença entre let, var e const.
+
+__________________________________________________________________________________________________________________________________________________________________
+Existe algum conhecimento específico que eu deveria saber sobre o JSON?
