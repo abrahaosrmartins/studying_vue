@@ -188,3 +188,6 @@ recebe é só uma descrição do objeto.
 136 - Passando a data de publicação no cadastro da vaga
 137 - Formatando a data no front.
 obs.: Aqui o prof complicou demais. Minha implementação foi bem mais simples
+138 - Comunicação de filho para pai
+obs.: $emit com v-on/@
+139 - Implementando essa Comunicação
